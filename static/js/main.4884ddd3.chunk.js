@@ -1,0 +1,2 @@
+(this["webpackJsonpfootball-api"]=this["webpackJsonpfootball-api"]||[]).push([[0],{10:function(t,e,n){"use strict";n.r(e);var o=n(0),c=n.n(o),i=n(3),r=n.n(i),a=(n(8),n(1));var s=function(){return Object(a.jsx)("h1",{children:"Football Api"})};r.a.render(Object(a.jsx)(c.a.StrictMode,{children:Object(a.jsx)(s,{})}),document.getElementById("root"))},8:function(t,e,n){}},[[10,1,2]]]);
+//# sourceMappingURL=main.4884ddd3.chunk.js.map
