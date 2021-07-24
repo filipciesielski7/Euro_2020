@@ -17,15 +17,18 @@ const Team = ({ team, group }) => {
   }
 
   return (
-    <div
-      className="team"
-      style={{
-        backgroundImage: `url(${flagUrl})`,
-      }}
-    >
-      <p>{name}</p>
-      <p>{code}</p>
-      <p>{group}</p>
+    <div>
+      <div
+        className="team"
+        style={{
+          backgroundImage: `url(${flagUrl})`,
+        }}
+      ></div>
+      {/* <div className="title">
+        <p>{name}</p>
+        <p>{code}</p>
+        <p>{group}</p>
+      </div> */}
     </div>
   );
 };

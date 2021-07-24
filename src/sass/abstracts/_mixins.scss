@@ -1,0 +1,65 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// MEDIA QUERY
+
+/*
+0 - 350px:      Very slim phone
+350 - 400px:    Slim phone
+400 - 480px:    Small phone
+480 - 640px:    Phone
+640 - 840px:    Tablet portrait
+840 - 1040px:   Tablet landscape
+[1040 - 1800]   is where our normal styles apply
+1800px +:       Big desktop
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == very-slim-phone {
+    @media (max-width: 21.875em) {
+      @content;
+    }
+  }
+  @if $breakpoint == slim-phone {
+    @media (max-width: 25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == small-phone {
+    @media (max-width: 30em) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    @media (max-width: 40em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 52.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 65em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}

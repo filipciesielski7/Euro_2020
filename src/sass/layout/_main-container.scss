@@ -1,0 +1,89 @@
+.main-container {
+  max-width: $default-max-width;
+  border-radius: 8px;
+  margin: 0px auto 10px auto;
+  padding: 30px 0px;
+  background: rgba(255, 255, 255, 0.5);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+  row-gap: 30px;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+@include respond(tab-port) {
+  .main-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@include respond(tab-land) {
+  .main-container {
+    margin: 0px 10px 10px 10px;
+  }
+}
+
+.team {
+  border: 5px solid $color-white;
+  border-radius: 18px;
+  color: black;
+  font-weight: bold;
+  text-decoration-line: underline;
+  float: left;
+  width: $default-cart-width;
+  height: $default-cart-height;
+  background-size: 100% 100%;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // filter: blur(2px);
+  // -webkit-filter: blur(2px);
+  // -moz-filter: blur(2px);
+  // -o-filter: blur(2px);
+  // -ms-filter: blur(2px);
+
+  &:hover {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    transform: scale(1.1);
+  }
+}
+
+@include respond(phone) {
+  .team {
+    width: 0.8 * $default-cart-width;
+    height: 0.8 * $default-cart-height;
+  }
+}
+
+@include respond(small-phone) {
+  .team {
+    width: 0.6 * $default-cart-width;
+    height: 0.6 * $default-cart-height;
+  }
+}
+
+@include respond(slim-phone) {
+  .team {
+    width: 0.5 * $default-cart-width;
+    height: 0.5 * $default-cart-height;
+  }
+}
+
+@include respond(very-slim-phone) {
+  .team {
+    width: 0.4 * $default-cart-width;
+    height: 0.4 * $default-cart-height;
+  }
+}

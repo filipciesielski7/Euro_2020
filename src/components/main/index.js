@@ -6,11 +6,13 @@ const Main = () => {
   const { groups } = useGlobalContext();
 
   return (
-    <div className="main-container">
-      {groups.map((group) => {
-        return <Group key={group.name} group={group} />;
-      })}
-    </div>
+    <main>
+      <div className="main-container">
+        {groups.map((group) => {
+          return <Group key={group.name} group={group} />;
+        })}
+      </div>
+    </main>
   );
 };
 
