@@ -11,6 +11,12 @@ const reducer = (state, action) => {
       flags: [...state.flags, action.payload],
     };
   }
+  if (action.type === "ADD_TEAMS") {
+    return {
+      ...state,
+      teams: [...state.teams, action.payload],
+    };
+  }
   throw new Error("no matching action type");
 };
 

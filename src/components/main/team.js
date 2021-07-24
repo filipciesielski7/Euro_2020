@@ -1,20 +1,17 @@
 import React from "react";
 import { useGlobalContext } from "../../context";
 
-const Team = ({ team, group }) => {
-  const { name, code } = team;
+const Team = ({ team }) => {
   const { flags } = useGlobalContext();
+  const { group_name, name, code } = team;
+
   let symbol;
   flags.forEach((element) => {
     if (element.name === name) {
       symbol = element.symbol;
     }
   });
-
-  let flagUrl;
-  if (symbol !== undefined) {
-    flagUrl = `https://flagcdn.com/h240/${symbol.replace(/_/g, "-")}.png`;
-  }
+  const flagUrl = `https://flagcdn.com/h240/${symbol.replace(/_/g, "-")}.png`;
 
   return (
     <div>
@@ -27,7 +24,7 @@ const Team = ({ team, group }) => {
       {/* <div className="title">
         <p>{name}</p>
         <p>{code}</p>
-        <p>{group}</p>
+        <p>{group_name}</p>
       </div> */}
     </div>
   );

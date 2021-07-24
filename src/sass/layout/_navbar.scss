@@ -3,15 +3,13 @@
   height: 293px;
   border-radius: 8px;
   margin: 10px auto;
-  background: rgba(255,255,255,.5);
+  background: rgba(255, 255, 255, 0.5);
 
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-@include respond(tab-land) {
-  .navbar {
+  @include respond(tab-land) {
     margin: 10px;
   }
 }

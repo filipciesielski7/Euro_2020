@@ -1,12 +1,13 @@
 import React from "react";
 import Team from "./team";
+import { useGlobalContext } from "../../context";
 
-const Group = ({ group }) => {
-  const { name, teams } = group;
+const Group = () => {
+  const { teams } = useGlobalContext();
   return (
     <>
       {teams.map((team) => {
-        return <Team key={team.name} team={team} group={name} />;
+        return <Team key={team.code} team={team} />;
       })}
     </>
   );

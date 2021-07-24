@@ -9,6 +9,7 @@ const initialState = {
   groups: groups,
   loading: false,
   flags: [],
+  teams: [],
 };
 
 const AppProvider = ({ children }) => {
@@ -30,8 +31,24 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "STOP_LOADING" });
   };
 
+  const addTeams = () => {
+    dispatch({ type: "LOADING" });
+    groups.map((group) => {
+      const group_name = group.name;
+      return group.teams.map((team) => {
+        const { name, code } = team;
+        return dispatch({
+          type: "ADD_TEAMS",
+          payload: { group_name, name, code },
+        });
+      });
+    });
+    dispatch({ type: "STOP_LOADING" });
+  };
+
   useEffect(() => {
     addFlags();
+    addTeams();
   }, []);
 
   return (

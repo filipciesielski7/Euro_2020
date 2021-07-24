@@ -13,16 +13,12 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-}
 
-@include respond(tab-port) {
-  .main-container {
+  @include respond(tab-port) {
     grid-template-columns: repeat(3, 1fr);
   }
-}
 
-@include respond(tab-land) {
-  .main-container {
+  @include respond(tab-land) {
     margin: 0px 10px 10px 10px;
   }
 }
@@ -58,31 +54,23 @@
     -ms-filter: blur(0px);
     transform: scale(1.1);
   }
-}
 
-@include respond(phone) {
-  .team {
+  @include respond(phone) {
     width: 0.8 * $default-cart-width;
     height: 0.8 * $default-cart-height;
   }
-}
 
-@include respond(small-phone) {
-  .team {
+  @include respond(small-phone) {
     width: 0.6 * $default-cart-width;
     height: 0.6 * $default-cart-height;
   }
-}
 
-@include respond(slim-phone) {
-  .team {
+  @include respond(slim-phone) {
     width: 0.5 * $default-cart-width;
     height: 0.5 * $default-cart-height;
   }
-}
 
-@include respond(very-slim-phone) {
-  .team {
+  @include respond(very-slim-phone) {
     width: 0.4 * $default-cart-width;
     height: 0.4 * $default-cart-height;
   }
