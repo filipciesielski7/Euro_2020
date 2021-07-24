@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../context";
 
 const Team = ({ team }) => {
@@ -21,6 +22,7 @@ const Team = ({ team }) => {
           backgroundImage: `url(${flagUrl})`,
         }}
       ></div>
+      {/* <Link to="/team/1"></Link> */}
       {/* <div className="title">
         <p>{name}</p>
         <p>{code}</p>
