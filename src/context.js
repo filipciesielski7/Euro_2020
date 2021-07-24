@@ -1,6 +1,6 @@
 import React, { useContext, useReducer, useEffect } from "react";
-import groups from "./data-groups";
-import flags from "./data-flags";
+import groups from "./data/data-groups";
+import flags from "./data/data-flags";
 import reducer from "./reducer";
 
 const AppContext = React.createContext();
