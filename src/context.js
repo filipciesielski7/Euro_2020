@@ -7,7 +7,7 @@ const AppContext = React.createContext();
 
 const initialState = {
   groups: groups,
-  loading: false,
+  loading: true,
   flags: [],
   teams: [],
 };
