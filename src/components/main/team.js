@@ -1,10 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../context";
 
 const Team = ({ team }) => {
   const { flags } = useGlobalContext();
-  const { group_name, name, code } = team;
+  // const { group_name, name, code } = team;
+  const { name } = team;
 
   let symbol;
   flags.forEach((element) => {
@@ -13,7 +14,7 @@ const Team = ({ team }) => {
     }
   });
   const flagUrl = `https://flagcdn.com/h240/${symbol.replace(/_/g, "-")}.png`;
-  
+
   return (
     <div>
       <div

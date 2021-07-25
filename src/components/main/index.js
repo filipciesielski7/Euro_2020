@@ -16,7 +16,7 @@ const Main = () => {
     );
   }
 
-  if (teams.length > 1) {
+  if (teams.length < 1) {
     return (
       <main>
         <div className="main-container main_container-no-results">

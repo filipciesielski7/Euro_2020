@@ -1,4 +1,4 @@
-import React, { useContext, useReducer, useEffect } from "react";
+import React, { useContext, useReducer, useEffect, useState } from "react";
 import groups from "./data/data-groups";
 import flags from "./data/data-flags";
 import reducer from "./reducer";
@@ -8,16 +8,18 @@ const AppContext = React.createContext();
 const initialState = {
   groups: groups,
   loading: true,
-  searchTerm: "",
+  // searchTerm: "",
   flags: [],
   teams: [],
 };
 
 const AppProvider = ({ children }) => {
+  const [searchTerm, setSearchTerm] = useState("");
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const addFlags = () => {
     dispatch({ type: "LOADING" });
+
     groups.map((item) =>
       item.teams.map((team) => {
         const item = flags.filter(
@@ -30,7 +32,7 @@ const AppProvider = ({ children }) => {
       })
     );
 
-    var delayInMilliseconds = 500; //2 second delay
+    var delayInMilliseconds = 500;
     setTimeout(function () {
       dispatch({ type: "STOP_LOADING" });
     }, delayInMilliseconds);
@@ -38,6 +40,7 @@ const AppProvider = ({ children }) => {
 
   const addTeams = () => {
     dispatch({ type: "LOADING" });
+
     groups.map((group) => {
       const group_name = group.name;
       return group.teams.map((team) => {
@@ -49,7 +52,7 @@ const AppProvider = ({ children }) => {
       });
     });
 
-    var delayInMilliseconds = 500; //2 second delay
+    var delayInMilliseconds = 500;
     setTimeout(function () {
       dispatch({ type: "STOP_LOADING" });
     }, delayInMilliseconds);
@@ -60,8 +63,39 @@ const AppProvider = ({ children }) => {
     addTeams();
   }, []);
 
+  useEffect(() => {
+    const updateTeams = () => {
+      dispatch({ type: "LOADING" });
+      dispatch({ type: "DELETE_TEAMS" });
+
+      groups.map((group) => {
+        const group_name = group.name;
+        return group.teams.map((team) => {
+          const { name, code } = team;
+          if (name.toUpperCase().includes(searchTerm.toUpperCase())) {
+            return dispatch({
+              type: "ADD_TEAMS",
+              payload: { group_name, name, code },
+            });
+          } else {
+            return null;
+          }
+        });
+      });
+
+      var delayInMilliseconds = 500;
+      setTimeout(function () {
+        dispatch({ type: "STOP_LOADING" });
+      }, delayInMilliseconds);
+    };
+
+    updateTeams();
+  }, [searchTerm]);
+
   return (
-    <AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ ...state, setSearchTerm }}>
+      {children}
+    </AppContext.Provider>
   );
 };
 

@@ -17,6 +17,12 @@ const reducer = (state, action) => {
       teams: [...state.teams, action.payload],
     };
   }
+  if (action.type === "DELETE_TEAMS") {
+    return {
+      ...state,
+      teams: [],
+    };
+  }
   throw new Error("no matching action type");
 };
 
