@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/Football-API/static/css/main.b725499c.chunk.css",
-    "main.js": "/Football-API/static/js/main.2abc59f3.chunk.js",
-    "main.js.map": "/Football-API/static/js/main.2abc59f3.chunk.js.map",
+    "main.css": "/Football-API/static/css/main.5148a7a1.chunk.css",
+    "main.js": "/Football-API/static/js/main.ccf74bea.chunk.js",
+    "main.js.map": "/Football-API/static/js/main.ccf74bea.chunk.js.map",
     "runtime-main.js": "/Football-API/static/js/runtime-main.82bf463e.js",
     "runtime-main.js.map": "/Football-API/static/js/runtime-main.82bf463e.js.map",
-    "static/js/2.321533c0.chunk.js": "/Football-API/static/js/2.321533c0.chunk.js",
-    "static/js/2.321533c0.chunk.js.map": "/Football-API/static/js/2.321533c0.chunk.js.map",
+    "static/js/2.58827f17.chunk.js": "/Football-API/static/js/2.58827f17.chunk.js",
+    "static/js/2.58827f17.chunk.js.map": "/Football-API/static/js/2.58827f17.chunk.js.map",
     "index.html": "/Football-API/index.html",
-    "static/css/main.b725499c.chunk.css.map": "/Football-API/static/css/main.b725499c.chunk.css.map",
-    "static/js/2.321533c0.chunk.js.LICENSE.txt": "/Football-API/static/js/2.321533c0.chunk.js.LICENSE.txt",
-    "static/media/logo.ddf8e590.png": "/Football-API/static/media/logo.ddf8e590.png"
+    "static/css/main.5148a7a1.chunk.css.map": "/Football-API/static/css/main.5148a7a1.chunk.css.map",
+    "static/js/2.58827f17.chunk.js.LICENSE.txt": "/Football-API/static/js/2.58827f17.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/Football-API/static/media/UEFA-EURO-2020.4b855bcd.ttf",
+    "static/media/UEFA-EURO-2020.ddf8e590.png": "/Football-API/static/media/UEFA-EURO-2020.ddf8e590.png"
   },
   "entrypoints": [
     "static/js/runtime-main.82bf463e.js",
-    "static/js/2.321533c0.chunk.js",
-    "static/css/main.b725499c.chunk.css",
-    "static/js/main.2abc59f3.chunk.js"
+    "static/js/2.58827f17.chunk.js",
+    "static/css/main.5148a7a1.chunk.css",
+    "static/js/main.ccf74bea.chunk.js"
   ]
 }
