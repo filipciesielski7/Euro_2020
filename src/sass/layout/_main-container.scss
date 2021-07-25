@@ -23,6 +23,32 @@
   }
 }
 
+.main_container-loading {
+  display: flex;
+  justify-content: center;
+  padding: 15%;
+  @include respond(tab-port) {
+    padding: 20%;
+  }
+}
+
+.main_container-no-results {
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  // font-size: 15px;
+
+  @include respond(tab-port) {
+    font-size: 15px;
+  }
+  @include respond(small-phone) {
+    font-size: 11px;
+  }
+  @include respond(very-slim-phone) {
+    font-size: 9px;
+  }
+}
+
 .team {
   border: 5px solid $color-white;
   border-radius: 18px;

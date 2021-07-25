@@ -13,7 +13,7 @@ const Team = ({ team }) => {
     }
   });
   const flagUrl = `https://flagcdn.com/h240/${symbol.replace(/_/g, "-")}.png`;
-
+  
   return (
     <div>
       <div

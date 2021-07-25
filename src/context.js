@@ -8,6 +8,7 @@ const AppContext = React.createContext();
 const initialState = {
   groups: groups,
   loading: true,
+  searchTerm: "",
   flags: [],
   teams: [],
 };
@@ -28,7 +29,11 @@ const AppProvider = ({ children }) => {
         });
       })
     );
-    dispatch({ type: "STOP_LOADING" });
+
+    var delayInMilliseconds = 500; //2 second delay
+    setTimeout(function () {
+      dispatch({ type: "STOP_LOADING" });
+    }, delayInMilliseconds);
   };
 
   const addTeams = () => {
@@ -43,7 +48,11 @@ const AppProvider = ({ children }) => {
         });
       });
     });
-    dispatch({ type: "STOP_LOADING" });
+
+    var delayInMilliseconds = 500; //2 second delay
+    setTimeout(function () {
+      dispatch({ type: "STOP_LOADING" });
+    }, delayInMilliseconds);
   };
 
   useEffect(() => {

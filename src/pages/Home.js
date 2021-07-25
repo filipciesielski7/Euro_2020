@@ -5,8 +5,10 @@ import Main from "../components/main";
 const Home = () => {
   return (
     <main>
-      <Navbar />
-      <Main />
+      <div className="home">
+        <Navbar />
+        <Main />
+      </div>
     </main>
   );
 };
