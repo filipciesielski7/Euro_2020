@@ -1,0 +1,68 @@
+.single-team-container {
+  background: $color-secondary-primary;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-team-section {
+  width: $default-max-width;
+  height: 80%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  color: $color-primary;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include respond(tab-land) {
+    margin: 10px;
+  }
+}
+
+.single-team-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding: 10px;
+  margin-top: 25px;
+  margin-left: 25px;
+  border-radius: 10px;
+  border: 3px solid $color-primary;
+  background: transparent;
+  color: $color-primary;
+  font-size: 20px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    transform: scale(1.1);
+    background: $color-primary;
+    color: $text-primary-color;
+    border: 3px solid $color-white;
+  }
+
+  @include respond(tab-port) {
+    font-size: 17px;
+  }
+  @include respond(small-phone) {
+    font-size: 14px;
+  }
+  @include respond(very-slim-phone) {
+    font-size: 12px;
+  }
+}
+
+
+.single-team-name{
+    font-size: 80px;
+    // background-image: url('../../data/UEFA-EURO-2020.png');
+}

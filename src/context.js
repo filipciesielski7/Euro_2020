@@ -90,7 +90,7 @@ const AppProvider = ({ children }) => {
   }, [searchTerm]);
 
   return (
-    <AppContext.Provider value={{ ...state, setSearchTerm }}>
+    <AppContext.Provider value={{ ...state, searchTerm, setSearchTerm }}>
       {children}
     </AppContext.Provider>
   );
