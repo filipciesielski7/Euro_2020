@@ -4,12 +4,44 @@
   border-radius: 8px;
   margin: 10px auto;
   background: rgba(255, 255, 255, 0.5);
+  color: $color-third-primary;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 
   @include respond(tab-land) {
     margin: 10px;
   }
+}
+
+.navbar-logo {
+  height: 50%;
+
+  @include respond(tab-port) {
+    height: 40%;
+  }
+  @include respond(small-phone) {
+    height: 38%;
+  }
+  @include respond(very-slim-phone) {
+    height: 35%;
+  }
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: #0084a4;
+}
+
+.search-input {
+  width: 100%;
+  border-radius: 3px;
+  height: 30px;
+  margin-top: 10px;
 }

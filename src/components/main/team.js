@@ -1,11 +1,11 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../context";
 
 const Team = ({ team }) => {
   const { flags } = useGlobalContext();
   // const { group_name, name, code } = team;
-  const { name } = team;
+  const { name, code } = team;
 
   let symbol;
   flags.forEach((element) => {
@@ -16,20 +16,22 @@ const Team = ({ team }) => {
   const flagUrl = `https://flagcdn.com/h240/${symbol.replace(/_/g, "-")}.png`;
 
   return (
-    <div>
-      <div
-        className="team"
-        style={{
-          backgroundImage: `url(${flagUrl})`,
-        }}
-      ></div>
-      {/* <Link to="/team/1"></Link> */}
-      {/* <div className="title">
-        <p>{name}</p>
-        <p>{code}</p>
-        <p>{group_name}</p>
-      </div> */}
-    </div>
+    <Link
+      to={`/team/${code}`}
+      className="team-link"
+    >
+      <div>
+        <div
+          className="team"
+          style={{
+            backgroundImage: `url(${flagUrl})`,
+          }}
+        ></div>
+        <div className="name">
+          <span className="name-span">{name}</span>
+        </div>
+      </div>
+    </Link>
   );
 };
 

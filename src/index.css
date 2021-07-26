@@ -37,12 +37,40 @@ body {
   border-radius: 8px;
   margin: 10px auto;
   background: rgba(255, 255, 255, 0.5);
+  color: #145f6b;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center; }
+  justify-content: space-around; }
   @media (max-width: 65em) {
     .navbar {
       margin: 10px; } }
+
+.navbar-logo {
+  height: 50%; }
+  @media (max-width: 52.5em) {
+    .navbar-logo {
+      height: 40%; } }
+  @media (max-width: 30em) {
+    .navbar-logo {
+      height: 38%; } }
+  @media (max-width: 21.875em) {
+    .navbar-logo {
+      height: 35%; } }
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: #0084a4; }
+
+.search-input {
+  width: 100%;
+  border-radius: 3px;
+  height: 30px;
+  margin-top: 10px; }
 
 .main-container {
   max-width: 1000px;
@@ -108,8 +136,7 @@ body {
     -webkit-filter: blur(0px);
     -moz-filter: blur(0px);
     -o-filter: blur(0px);
-    -ms-filter: blur(0px);
-    transform: scale(1.1); }
+    -ms-filter: blur(0px); }
   @media (max-width: 40em) {
     .team {
       width: 141.6px;
@@ -126,6 +153,36 @@ body {
     .team {
       width: 70.8px;
       height: 47.2px; } }
+
+.team-link {
+  text-decoration: none;
+  color: #145f6b; }
+  .team-link:hover {
+    transform: scale(1.1); }
+  .team-link:active {
+    color: #fff; }
+
+.name {
+  text-align: center;
+  text-decoration: none;
+  cursor: default; }
+  @media (max-width: 25em) {
+    .name {
+      display: none; } }
+  @media (max-width: 21.875em) {
+    .name {
+      display: none; } }
+
+.name-span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative; }
+  @media (max-width: 40em) {
+    .name-span {
+      font-size: 13px; } }
+  @media (max-width: 30em) {
+    .name-span {
+      font-size: 11px; } }
 
 .home {
   background: #21a0b3;

@@ -78,8 +78,12 @@
     -moz-filter: blur(0px);
     -o-filter: blur(0px);
     -ms-filter: blur(0px);
-    transform: scale(1.1);
+    //transform: scale(1.1);
   }
+
+  // &:hover ~ .name {
+  //   transform: scale(1.1);
+  // }
 
   @include respond(phone) {
     width: 0.8 * $default-cart-width;
@@ -99,5 +103,45 @@
   @include respond(very-slim-phone) {
     width: 0.4 * $default-cart-width;
     height: 0.4 * $default-cart-height;
+  }
+}
+
+.team-link {
+  text-decoration: none;
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  color: $color-third-primary;
+  &:active {
+    color: $color-white;
+  }
+}
+
+.name {
+  text-align: center;
+  text-decoration: none;
+  cursor: default;
+
+  @include respond(slim-phone) {
+    display: none;
+  }
+
+  @include respond(very-slim-phone) {
+    display: none;
+  }
+}
+
+.name-span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+
+  @include respond(phone) {
+    font-size: 13px;
+  }
+
+  @include respond(small-phone) {
+    font-size: 11px;
   }
 }
