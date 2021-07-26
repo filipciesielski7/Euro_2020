@@ -39,38 +39,69 @@ body {
   background: rgba(255, 255, 255, 0.5);
   color: #145f6b;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-around; }
   @media (max-width: 65em) {
     .navbar {
       margin: 10px; } }
 
+.search-form {
+  width: 50%; }
+
 .navbar-logo {
-  height: 50%; }
+  height: 75%; }
   @media (max-width: 52.5em) {
     .navbar-logo {
-      height: 40%; } }
+      height: 60%; } }
   @media (max-width: 30em) {
     .navbar-logo {
-      height: 38%; } }
+      height: 50%; } }
   @media (max-width: 21.875em) {
     .navbar-logo {
-      height: 35%; } }
+      height: 40%; } }
 
 .form-control {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 25px;
+  font-size: 35px;
   color: #0084a4; }
+  @media (max-width: 52.5em) {
+    .form-control {
+      font-size: 30px; } }
+  @media (max-width: 30em) {
+    .form-control {
+      font-size: 20px; } }
+  @media (max-width: 21.875em) {
+    .form-control {
+      font-size: 15px; } }
+
+label {
+  margin-bottom: 10px; }
 
 .search-input {
-  width: 100%;
-  border-radius: 3px;
-  height: 30px;
-  margin-top: 10px; }
+  height: 52px;
+  border-radius: 8px;
+  font-size: 22px;
+  padding-left: 10%;
+  background: transparent;
+  border: 3px solid #0084a4;
+  color: #0084a4;
+  outline: none; }
+  .search-input:focus {
+    border: 3px solid white; }
+  @media (max-width: 52.5em) {
+    .search-input {
+      font-size: 15px; } }
+  @media (max-width: 30em) {
+    .search-input {
+      height: 40px;
+      font-size: 12px; } }
+  @media (max-width: 21.875em) {
+    .search-input {
+      height: 30px;
+      font-size: 9px; } }
 
 .main-container {
   max-width: 1000px;
@@ -104,7 +135,8 @@ body {
 .main_container-no-results {
   display: flex;
   justify-content: center;
-  padding: 5%; }
+  padding: 5%;
+  color: #0084a4; }
   @media (max-width: 52.5em) {
     .main_container-no-results {
       font-size: 15px; } }
@@ -245,7 +277,10 @@ body {
   background: transparent;
   color: #0084A4;
   font-size: 20px;
-  text-decoration: none; }
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .error-btn:hover {
     transform: scale(1.1);
     background: #0084A4;

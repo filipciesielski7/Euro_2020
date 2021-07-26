@@ -7,7 +7,7 @@
   color: $color-third-primary;
 
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   align-items: center;
   justify-content: space-around;
 
@@ -16,17 +16,25 @@
   }
 }
 
+.search-form {
+  width: 50%;
+}
+
 .navbar-logo {
-  height: 50%;
+  // height: 50%;
+  height: 75%;
 
   @include respond(tab-port) {
-    height: 40%;
+    // height: 40%;
+    height: 60%;
   }
   @include respond(small-phone) {
-    height: 38%;
+    // height: 38%;
+    height: 50%;
   }
   @include respond(very-slim-phone) {
-    height: 35%;
+    // height: 35%;
+    height: 40%;
   }
 }
 
@@ -35,13 +43,46 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 25px;
+  font-size: 35px;
   color: #0084a4;
+
+  @include respond(tab-port) {
+    font-size: 30px;
+  }
+  @include respond(small-phone) {
+    font-size: 20px;
+  }
+  @include respond(very-slim-phone) {
+    font-size: 15px;
+  }
+}
+
+label {
+  margin-bottom: 10px;
 }
 
 .search-input {
-  width: 100%;
-  border-radius: 3px;
-  height: 30px;
-  margin-top: 10px;
+  height: 52px;
+  border-radius: 8px;
+  font-size: 22px;
+  padding-left: 10%;
+  background: transparent;
+  border: 3px solid #0084a4;
+  color: #0084a4;
+  outline: none;
+
+  &:focus {
+    border: 3px solid white;
+  }
+  @include respond(tab-port) {
+    font-size: 15px;
+  }
+  @include respond(small-phone) {
+    height: 40px;
+    font-size: 12px;
+  }
+  @include respond(very-slim-phone) {
+    height: 30px;
+    font-size: 9px;
+  }
 }

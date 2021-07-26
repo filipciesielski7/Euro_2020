@@ -40,6 +40,7 @@ const AppProvider = ({ children }) => {
 
   const addTeams = () => {
     dispatch({ type: "LOADING" });
+    dispatch({ type: "DELETE_TEAMS" });
 
     groups.map((group) => {
       const group_name = group.name;
