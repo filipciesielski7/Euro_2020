@@ -45,6 +45,7 @@
   justify-content: center;
   font-size: 35px;
   color: #0084a4;
+  position: relative;
 
   @include respond(tab-port) {
     font-size: 30px;
