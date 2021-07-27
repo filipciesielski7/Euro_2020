@@ -88,7 +88,8 @@ label {
   background: transparent;
   border: 3px solid #0084a4;
   color: #0084a4;
-  outline: none; }
+  outline: none;
+  position: relative; }
   .search-input:focus {
     border: 3px solid white; }
   @media (max-width: 52.5em) {
@@ -102,6 +103,26 @@ label {
     .search-input {
       height: 30px;
       font-size: 9px; } }
+
+.del-text {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: translate(300%, 75%); }
+  @media (max-width: 52.5em) {
+    .del-text {
+      transform: translate(250%, 75%);
+      font-size: 30px; } }
+  @media (max-width: 30em) {
+    .del-text {
+      transform: translate(250%, 75%);
+      font-size: 23px; } }
+  @media (max-width: 21.875em) {
+    .del-text {
+      transform: translate(250%, 75%);
+      font-size: 19px; } }
 
 .main-container {
   max-width: 1000px;

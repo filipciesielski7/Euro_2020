@@ -31,11 +31,7 @@ const AppProvider = ({ children }) => {
         });
       })
     );
-
-    var delayInMilliseconds = 500;
-    setTimeout(function () {
-      dispatch({ type: "STOP_LOADING" });
-    }, delayInMilliseconds);
+    dispatch({ type: "STOP_LOADING" });
   };
 
   const addTeams = () => {
@@ -52,11 +48,7 @@ const AppProvider = ({ children }) => {
         });
       });
     });
-
-    var delayInMilliseconds = 500;
-    setTimeout(function () {
-      dispatch({ type: "STOP_LOADING" });
-    }, delayInMilliseconds);
+    dispatch({ type: "STOP_LOADING" });
   };
 
   useEffect(() => {

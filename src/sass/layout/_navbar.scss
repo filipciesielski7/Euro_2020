@@ -70,6 +70,7 @@ label {
   border: 3px solid #0084a4;
   color: #0084a4;
   outline: none;
+  position: relative;
 
   &:focus {
     border: 3px solid white;
@@ -84,5 +85,29 @@ label {
   @include respond(very-slim-phone) {
     height: 30px;
     font-size: 9px;
+  }
+}
+
+.del-text{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: translate(300%, 75%);
+
+  @include respond(tab-port) {
+    transform: translate(250%, 75%);
+    font-size: 30px;
+  }
+
+  @include respond(small-phone) {
+    transform: translate(250%, 75%);
+    font-size: 23px;
+  }
+
+  @include respond(very-slim-phone) {
+    transform: translate(250%, 75%);
+    font-size: 19px;
   }
 }
