@@ -8,7 +8,6 @@ const SearchForm = () => {
   const searchValue = useRef("");
 
   var hintArray = teams.map((team) => team.name);
-  console.log(hintArray);
 
   const searchTeam = () => {
     setSearchTerm(searchValue.current.value);

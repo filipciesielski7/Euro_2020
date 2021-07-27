@@ -8,14 +8,36 @@ const AppContext = React.createContext();
 const initialState = {
   groups: groups,
   loading: true,
-  // searchTerm: "",
   flags: [],
   teams: [],
+  display: ["teams"],
+  stadiums: [],
+  tvchannels: [],
+  groups2: [],
 };
 
 const AppProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  const fetchData = async () => {
+    dispatch({ type: "LOADING" });
+    try {
+      const response = await fetch(
+        "https://raw.githubusercontent.com/lsv/uefa-euro-2020/master/data.json"
+      );
+      const data = await response.json();
+      const { stadiums, tvchannels, groups, knockoutphases } = data;
+      dispatch({
+        type: "ADD_DATA",
+        payload: { stadiums, tvchannels, groups, knockoutphases },
+      });
+      dispatch({ type: "STOP_LOADING" });
+    } catch (error) {
+      console.log(error);
+      dispatch({ type: "STOP_LOADING" });
+    }
+  };
 
   const addFlags = () => {
     dispatch({ type: "LOADING" });
@@ -52,6 +74,7 @@ const AppProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    fetchData();
     addFlags();
     addTeams();
   }, []);
@@ -80,9 +103,11 @@ const AppProvider = ({ children }) => {
 
     updateTeams();
   }, [searchTerm]);
-
+  
   return (
-    <AppContext.Provider value={{ ...state, searchTerm, setSearchTerm }}>
+    <AppContext.Provider
+      value={{ ...state, searchTerm, setSearchTerm }}
+    >
       {children}
     </AppContext.Provider>
   );
