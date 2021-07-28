@@ -2,7 +2,7 @@ import React from "react";
 import { useGlobalContext } from "../../context";
 
 const Standings = ({ code }) => {
-  const { teams, groups, groups2 } = useGlobalContext();
+  const { teams, groups2 } = useGlobalContext();
 
   let group;
   teams.forEach((team) => {
@@ -21,24 +21,7 @@ const Standings = ({ code }) => {
     fourthplace = this_group[0].fourthplace;
   }
 
-//   groups.forEach((group) => {
-//     if ((group.name = group)) {
-//       group.teams.forEach((team) => {
-//         if (winner === team.code) {
-//           winner = team.name;
-//         }
-//         if (runnerup === team.code) {
-//           runnerup = team.name;
-//         }
-//         if (thirdplace === team.code) {
-//           thirdplace = team.name;
-//         }
-//         if (fourthplace === team.code) {
-//           fourthplace = team.name;
-//         }
-//       });
-//     }
-//   });
+  // ADD NAMES INSTEAD OF CODES
 
   return (
     <div className="standings">

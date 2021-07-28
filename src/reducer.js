@@ -12,6 +12,7 @@ const reducer = (state, action) => {
       tvchannels: action.payload.tvchannels,
       groups2: action.payload.groups,
       knockoutphases: action.payload.knockoutphases,
+      matches: action.payload.matches,
     };
   }
   if (action.type === "ADD_FLAG") {

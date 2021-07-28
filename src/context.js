@@ -14,6 +14,7 @@ const initialState = {
   stadiums: [],
   tvchannels: [],
   groups2: [],
+  matches: [],
 };
 
 const AppProvider = ({ children }) => {
@@ -28,9 +29,11 @@ const AppProvider = ({ children }) => {
       );
       const data = await response.json();
       const { stadiums, tvchannels, groups, knockoutphases } = data;
+      // const matches = groups.matches;
+      const matches = groups.map((obj) => [obj.name, obj.matches]);
       dispatch({
         type: "ADD_DATA",
-        payload: { stadiums, tvchannels, groups, knockoutphases },
+        payload: { stadiums, tvchannels, groups, matches, knockoutphases },
       });
       dispatch({ type: "STOP_LOADING" });
     } catch (error) {
@@ -103,11 +106,9 @@ const AppProvider = ({ children }) => {
 
     updateTeams();
   }, [searchTerm]);
-  
+
   return (
-    <AppContext.Provider
-      value={{ ...state, searchTerm, setSearchTerm }}
-    >
+    <AppContext.Provider value={{ ...state, searchTerm, setSearchTerm }}>
       {children}
     </AppContext.Provider>
   );

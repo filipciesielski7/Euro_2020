@@ -3,6 +3,7 @@ import { FaBackward } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "./navbar";
 import Standings from "./standings";
+import Matches from "./matches";
 
 const Team = () => {
   const { code } = useParams();
@@ -54,7 +55,7 @@ const Team = () => {
             <Standings code={code} />
           </div>
           <div className={`sub-main-major ${active === 2 ? "" : "major-none"}`}>
-            MATCHES
+            <Matches code={code} />
           </div>
           <div className={`sub-main-major ${active === 3 ? "" : "major-none"}`}>
             SQUAD
