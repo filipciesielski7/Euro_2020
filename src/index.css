@@ -356,19 +356,19 @@ label {
       height: 118px; } }
 
 .single-team-name {
-  font-size: 70px; }
+  font-size: 60px; }
   @media (max-width: 52.5em) {
     .single-team-name {
-      font-size: 50px; } }
+      font-size: 40px; } }
   @media (max-width: 30em) {
     .single-team-name {
-      font-size: 45px; } }
+      font-size: 35px; } }
   @media (max-width: 25em) {
     .single-team-name {
-      font-size: 40px; } }
+      font-size: 30px; } }
   @media (max-width: 21.875em) {
     .single-team-name {
-      font-size: 35px; } }
+      font-size: 25px; } }
 
 @media (max-width: 40em) {
   .back-info {
@@ -461,6 +461,81 @@ label {
 
 .out {
   color: #920303; }
+
+.winner {
+  font-size: 60px; }
+  @media (max-width: 40em) {
+    .winner {
+      font-size: 55px; } }
+  @media (max-width: 30em) {
+    .winner {
+      font-size: 50px; } }
+  @media (max-width: 25em) {
+    .winner {
+      font-size: 45px; } }
+  @media (max-width: 21.875em) {
+    .winner {
+      font-size: 40px; } }
+
+.matches-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px; }
+  @media (max-width: 40em) {
+    .matches-container {
+      font-size: 35px; } }
+  @media (max-width: 30em) {
+    .matches-container {
+      font-size: 30px; } }
+  @media (max-width: 25em) {
+    .matches-container {
+      font-size: 25px; } }
+  @media (max-width: 21.875em) {
+    .matches-container {
+      font-size: 20px; } }
+
+.match {
+  background-color: #0084A4;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 5px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px; }
+  @media (max-width: 52.5em) {
+    .match {
+      width: 100%; } }
+  @media (max-width: 40em) {
+    .match {
+      font-size: 25px; } }
+  @media (max-width: 30em) {
+    .match {
+      font-size: 20px; } }
+  @media (max-width: 25em) {
+    .match {
+      font-size: 15px; } }
+  @media (max-width: 21.875em) {
+    .match {
+      font-size: 12px; } }
+
+.stadium-info {
+  font-size: 20px; }
+  @media (max-width: 30em) {
+    .stadium-info {
+      font-size: 15px; } }
+  @media (max-width: 25em) {
+    .stadium-info {
+      font-size: 12px; } }
+  @media (max-width: 21.875em) {
+    .stadium-info {
+      font-size: 9px; } }
 
 .home {
   background: #21a0b3;
