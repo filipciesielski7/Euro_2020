@@ -50,7 +50,7 @@ const groups = [
       },
       {
         name: "North Macedonia",
-        code: "MKD",
+        code: "MAC",
       },
       {
         name: "Netherlands",
@@ -92,7 +92,7 @@ const groups = [
       },
       {
         name: "Slovakia",
-        code: "SVK",
+        code: "SLO",
       },
       {
         name: "Spain",

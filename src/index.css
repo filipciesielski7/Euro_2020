@@ -248,7 +248,6 @@ label {
 
 .single-team-section {
   width: 1000px;
-  height: 80%;
   padding: 5px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.5);
@@ -258,12 +257,6 @@ label {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
-  @media (max-width: 40em) {
-    .single-team-section {
-      height: 90%; } }
-  @media (max-width: 30em) {
-    .single-team-section {
-      height: 98%; } }
   @media (max-width: 65em) {
     .single-team-section {
       margin: 10px; } }
@@ -315,7 +308,7 @@ label {
 
 .subnav {
   width: 100%;
-  height: 500px;
+  padding: 20px;
   margin-top: 5%;
   display: flex;
   flex-direction: row;
@@ -446,6 +439,28 @@ label {
 
 .sub-main-major {
   margin-top: 20px; }
+
+.standings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px; }
+  @media (max-width: 40em) {
+    .standings {
+      font-size: 35px; } }
+  @media (max-width: 30em) {
+    .standings {
+      font-size: 30px; } }
+  @media (max-width: 25em) {
+    .standings {
+      font-size: 25px; } }
+  @media (max-width: 21.875em) {
+    .standings {
+      font-size: 20px; } }
+
+.out {
+  color: #920303; }
 
 .home {
   background: #21a0b3;
