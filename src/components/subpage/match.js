@@ -1,7 +1,7 @@
 import React from "react";
 import { useGlobalContext } from "../../context";
 
-const Match = ({ match, team }) => {
+const Match = ({ match, team, stage }) => {
   const { groups } = useGlobalContext();
 
   let teams = [];
@@ -24,18 +24,29 @@ const Match = ({ match, team }) => {
   return (
     <div
       className={
-        (team === match.home_team || team === match.away_team) ? "match" : undefined
+        team === match.home_team || team === match.away_team
+          ? "match"
+          : undefined
       }
     >
       <div className="basic-match-info">
-        {(team === match.home_team || team === match.away_team) ?
-          `${findFullName(teams, match.home_team)} ${match.home_result} - ${
-            match.away_result
-          } ${findFullName(teams, match.away_team)}` : undefined}
+        {team === match.home_team || team === match.away_team
+          ? `${findFullName(teams, match.home_team)} ${match.home_result} - ${
+              match.away_result
+            } ${findFullName(teams, match.away_team)}\n`
+          : undefined}
+      </div>
+      <div className="basic-match-info penalties">
+        {(team === match.home_team || team === match.away_team) &&
+        match.home_result === match.away_result &&
+        stage !== "group"
+          ? `${match.home_penalty} : ${match.away_penalty} on penalties`
+          : undefined}
       </div>
       <div className="stadium-info">
-        {(team === match.home_team || team === match.away_team) ?
-          `${match.date.slice(0, 10)} ${match.stadium}` : undefined}
+        {team === match.home_team || team === match.away_team
+          ? `${match.date.slice(0, 10)} ${match.stadium}`
+          : undefined}
       </div>
     </div>
   );

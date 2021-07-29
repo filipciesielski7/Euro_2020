@@ -12,6 +12,10 @@ const reducer = (state, action) => {
       tvchannels: action.payload.tvchannels,
       groups2: action.payload.groups,
       knockoutphases: action.payload.knockoutphases,
+      round16: action.payload.knockoutphases.round16.matches,
+      round8: action.payload.knockoutphases.round8.matches,
+      round4: action.payload.knockoutphases.round4.matches,
+      round2: action.payload.knockoutphases.round2.matches,
       matches: action.payload.matches,
     };
   }

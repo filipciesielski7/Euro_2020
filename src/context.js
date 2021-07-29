@@ -15,6 +15,10 @@ const initialState = {
   tvchannels: [],
   groups2: [],
   matches: [],
+  round16: [],
+  round8: [],
+  round4: [],
+  round2: [],
 };
 
 const AppProvider = ({ children }) => {

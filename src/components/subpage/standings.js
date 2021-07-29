@@ -2,7 +2,7 @@ import React from "react";
 import { useGlobalContext } from "../../context";
 
 const Standings = ({ code }) => {
-  const { teams, groups, groups2 } = useGlobalContext();
+  const { teams, groups, groups2, round16 } = useGlobalContext();
 
   let group;
   teams.forEach((team) => {
@@ -20,6 +20,13 @@ const Standings = ({ code }) => {
     thirdplace = this_group[0].thirdplace;
     fourthplace = this_group[0].fourthplace;
   }
+
+  let isPlayingInRound16 = false;
+  round16.forEach((match) => {
+    if (match.home_team === thirdplace || match.away_team === thirdplace) {
+      isPlayingInRound16 = true;
+    }
+  });
 
   let page_team;
   groups.forEach((element) => {
@@ -42,7 +49,6 @@ const Standings = ({ code }) => {
             page_team = team.name;
           }
           thirdplace = team.name;
-          // thirdplace_code = team.code;
         }
         if (fourthplace === team.code) {
           if (fourthplace === code) {
@@ -54,8 +60,10 @@ const Standings = ({ code }) => {
     }
   });
 
-  // ADD NORMAL OPACITY TO THIRD PLACES
   let third_place = "outh";
+  if (isPlayingInRound16) {
+    third_place = "";
+  }
 
   return (
     <>

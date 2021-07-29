@@ -3,7 +3,8 @@ import Match from "./match";
 import { useGlobalContext } from "../../context";
 
 const Matches = ({ code }) => {
-  const { matches, groups } = useGlobalContext();
+  const { matches, groups, round16, round8, round4, round2 } =
+    useGlobalContext();
 
   // let all_info, matches2;
   let all_info;
@@ -24,13 +25,35 @@ const Matches = ({ code }) => {
       }
     });
   });
-  // console.log(all_info);
 
-  // ADD KOCKOUTSTAGE MATCHES AND ADD STADIUM DESCRIPTIONS
+  let isPlayingInRound16 = false;
+  round16.forEach((match) => {
+    if (match.home_team === code || match.away_team === code) {
+      isPlayingInRound16 = true;
+    }
+  });
+  let isPlayingInRound8 = false;
+  round8.forEach((match) => {
+    if (match.home_team === code || match.away_team === code) {
+      isPlayingInRound8 = true;
+    }
+  });
+  let isPlayingInRound4 = false;
+  round4.forEach((match) => {
+    if (match.home_team === code || match.away_team === code) {
+      isPlayingInRound4 = true;
+    }
+  });
+  let isPlayingInRound2 = false;
+  round2.forEach((match) => {
+    if (match.home_team === code || match.away_team === code) {
+      isPlayingInRound2 = true;
+    }
+  });
 
   return (
     <div className="matches-container">
-      Group Stage
+      <div className="match-title">Group Stage</div>
       {all_info
         ? all_info.matches.map((match) => {
             return (
@@ -39,6 +62,69 @@ const Matches = ({ code }) => {
                 match={match}
                 team={code}
                 group={all_info.group}
+                stage="group"
+              />
+            );
+          })
+        : undefined}
+      <div className={isPlayingInRound16 ? "match-title" : "none"}>
+        Round 16
+      </div>
+      {round16
+        ? round16.map((match) => {
+            return (
+              <Match
+                key={`${match.id}${match.home_team}`}
+                match={match}
+                team={code}
+                group={all_info.group}
+                stage="16"
+              />
+            );
+          })
+        : undefined}
+      <div className={isPlayingInRound8 ? "match-title" : "none"}>
+        Quarterfinal
+      </div>
+      {round8
+        ? round8.map((match) => {
+            return (
+              <Match
+                key={`${match.id}${match.home_team}`}
+                match={match}
+                team={code}
+                group={all_info.group}
+                stage="8"
+              />
+            );
+          })
+        : undefined}
+      <div className={isPlayingInRound4 ? "match-title" : "none"}>
+        Semifinal
+      </div>
+      {round4
+        ? round4.map((match) => {
+            return (
+              <Match
+                key={`${match.id}${match.home_team}`}
+                match={match}
+                team={code}
+                group={all_info.group}
+                stage="4"
+              />
+            );
+          })
+        : undefined}
+      <div className={isPlayingInRound2 ? "match-title" : "none"}>Final</div>
+      {round2
+        ? round2.map((match) => {
+            return (
+              <Match
+                key={`${match.id}${match.home_team}`}
+                match={match}
+                team={code}
+                group={all_info.group}
+                stage="2"
               />
             );
           })
