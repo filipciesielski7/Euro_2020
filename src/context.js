@@ -33,7 +33,6 @@ const AppProvider = ({ children }) => {
       );
       const data = await response.json();
       const { stadiums, tvchannels, groups, knockoutphases } = data;
-      // const matches = groups.matches;
       const matches = groups.map((obj) => [obj.name, obj.matches]);
       dispatch({
         type: "ADD_DATA",

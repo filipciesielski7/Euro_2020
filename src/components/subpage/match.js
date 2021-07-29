@@ -2,7 +2,7 @@ import React from "react";
 import { useGlobalContext } from "../../context";
 
 const Match = ({ match, team, stage }) => {
-  const { groups } = useGlobalContext();
+  const { groups, stadiums } = useGlobalContext();
 
   let teams = [];
   groups.forEach((element) => {
@@ -20,6 +20,15 @@ const Match = ({ match, team, stage }) => {
     });
     return name;
   };
+
+  let stadium_name, stadium_city;
+  stadiums.forEach((stadium) => {
+    if (stadium.id === match.stadium) {
+      stadium_name = stadium.name;
+      stadium_city = stadium.city;
+      // stadium_country = stadium.country;
+    }
+  });
 
   return (
     <div
@@ -45,7 +54,7 @@ const Match = ({ match, team, stage }) => {
       </div>
       <div className="stadium-info">
         {team === match.home_team || team === match.away_team
-          ? `${match.date.slice(0, 10)} ${match.stadium}`
+          ? `${match.date.slice(0, 10)} ${stadium_name}, ${stadium_city}`
           : undefined}
       </div>
     </div>
