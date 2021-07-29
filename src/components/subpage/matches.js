@@ -24,16 +24,25 @@ const Matches = ({ code }) => {
       }
     });
   });
-  console.log(all_info);
+  // console.log(all_info);
 
-  // ADD KOCKOUTSTAGE MATCHES
+  // ADD KOCKOUTSTAGE MATCHES AND ADD STADIUM DESCRIPTIONS
 
   return (
     <div className="matches-container">
       Group Stage
-      {all_info && all_info.matches.map((match) => {
-        return <Match key={`${match.id}${match.home_team}`} match={match} team={code} group={all_info.group}/>;
-      })}
+      {all_info
+        ? all_info.matches.map((match) => {
+            return (
+              <Match
+                key={`${match.id}${match.home_team}`}
+                match={match}
+                team={code}
+                group={all_info.group}
+              />
+            );
+          })
+        : undefined}
     </div>
   );
 };

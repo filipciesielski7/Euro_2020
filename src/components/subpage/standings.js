@@ -21,38 +21,68 @@ const Standings = ({ code }) => {
     fourthplace = this_group[0].fourthplace;
   }
 
+  let page_team;
   groups.forEach((element) => {
     if (element.name === group) {
       element.teams.forEach((team) => {
         if (winner === team.code) {
+          if (winner === code) {
+            page_team = team.name;
+          }
           winner = team.name;
         }
         if (runnerup === team.code) {
+          if (runnerup === code) {
+            page_team = team.name;
+          }
           runnerup = team.name;
         }
         if (thirdplace === team.code) {
+          if (thirdplace === code) {
+            page_team = team.name;
+          }
           thirdplace = team.name;
+          // thirdplace_code = team.code;
         }
         if (fourthplace === team.code) {
+          if (fourthplace === code) {
+            page_team = team.name;
+          }
           fourthplace = team.name;
         }
       });
     }
   });
 
+  // ADD NORMAL OPACITY TO THIRD PLACES
+  let third_place = "outh";
+
   return (
-    <div className="standings">
-      <div className="standings-container">
-        <h3 className="winner">1. {winner}</h3>
-        <h3>2. {runnerup}</h3>
-        <h3>
-          <span className="out">3.</span> {thirdplace}
-        </h3>
-        <h3>
-          <span className="out">4.</span> {fourthplace}
-        </h3>
+    <>
+      <div className="final-table">Final Table</div>
+      <div className="standings">
+        <div className="standings-container">
+          <h3 className={winner === page_team ? "winner underline" : "winner"}>
+            1. {winner}{" "}
+          </h3>
+          <h3 className={runnerup === page_team ? "underline" : ""}>
+            2. {runnerup}{" "}
+          </h3>
+          <h3
+            className={
+              thirdplace === page_team
+                ? `${third_place} underline`
+                : `${third_place}`
+            }
+          >
+            <span className="out">3.</span> {thirdplace}
+          </h3>
+          <h3 className={fourthplace === page_team ? "outh underline" : "outh"}>
+            <span className="out">4.</span> {fourthplace}
+          </h3>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
