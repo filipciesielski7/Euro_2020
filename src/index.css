@@ -489,19 +489,20 @@ label {
 .outh {
   opacity: 0.7; }
 
-.winner {
-  font-size: 60px; }
+.underline {
+  font-size: 60px;
+  text-shadow: 0 0 3px #0084A4, 0 0 5px #000; }
   @media (max-width: 40em) {
-    .winner {
+    .underline {
       font-size: 55px; } }
   @media (max-width: 30em) {
-    .winner {
+    .underline {
       font-size: 50px; } }
   @media (max-width: 25em) {
-    .winner {
+    .underline {
       font-size: 45px; } }
   @media (max-width: 21.875em) {
-    .winner {
+    .underline {
       font-size: 40px; } }
 
 .matches-container {
@@ -585,9 +586,6 @@ label {
 
 .arrow {
   font-size: 27px; }
-
-.underline {
-  text-decoration: underline; }
 
 .none {
   display: none; }

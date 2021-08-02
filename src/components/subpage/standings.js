@@ -70,7 +70,7 @@ const Standings = ({ code }) => {
       <div className="final-table">Final Table</div>
       <div className="standings">
         <div className="standings-container">
-          <h3 className={winner === page_team ? "winner underline" : "winner"}>
+          <h3 className={winner === page_team ? "underline" : ""}>
             1. {winner}{" "}
           </h3>
           <h3 className={runnerup === page_team ? "underline" : ""}>
