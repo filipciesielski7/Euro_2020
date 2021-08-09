@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Football-API/static/css/main.8dfe865a.chunk.css",
-    "main.js": "/Football-API/static/js/main.e3ec83ad.chunk.js",
-    "main.js.map": "/Football-API/static/js/main.e3ec83ad.chunk.js.map",
+    "main.css": "/Football-API/static/css/main.0a4c84eb.chunk.css",
+    "main.js": "/Football-API/static/js/main.eeb5bd8f.chunk.js",
+    "main.js.map": "/Football-API/static/js/main.eeb5bd8f.chunk.js.map",
     "runtime-main.js": "/Football-API/static/js/runtime-main.82bf463e.js",
     "runtime-main.js.map": "/Football-API/static/js/runtime-main.82bf463e.js.map",
     "static/js/2.057d8d74.chunk.js": "/Football-API/static/js/2.057d8d74.chunk.js",
     "static/js/2.057d8d74.chunk.js.map": "/Football-API/static/js/2.057d8d74.chunk.js.map",
     "index.html": "/Football-API/index.html",
-    "static/css/main.8dfe865a.chunk.css.map": "/Football-API/static/css/main.8dfe865a.chunk.css.map",
+    "static/css/main.0a4c84eb.chunk.css.map": "/Football-API/static/css/main.0a4c84eb.chunk.css.map",
     "static/js/2.057d8d74.chunk.js.LICENSE.txt": "/Football-API/static/js/2.057d8d74.chunk.js.LICENSE.txt",
     "static/media/index.css": "/Football-API/static/media/UEFA-EURO-2020.4b855bcd.ttf",
     "static/media/UEFA-EURO-2020.ddf8e590.png": "/Football-API/static/media/UEFA-EURO-2020.ddf8e590.png"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.82bf463e.js",
     "static/js/2.057d8d74.chunk.js",
-    "static/css/main.8dfe865a.chunk.css",
-    "static/js/main.e3ec83ad.chunk.js"
+    "static/css/main.0a4c84eb.chunk.css",
+    "static/js/main.eeb5bd8f.chunk.js"
   ]
 }
