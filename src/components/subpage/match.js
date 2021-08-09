@@ -26,7 +26,6 @@ const Match = ({ match, team, stage }) => {
     if (stadium.id === match.stadium) {
       stadium_name = stadium.name;
       stadium_city = stadium.city;
-      // stadium_country = stadium.country;
     }
   });
 
@@ -38,21 +37,21 @@ const Match = ({ match, team, stage }) => {
           : undefined
       }
     >
-      <div className="basic-match-info">
+      <div className="match__info">
         {team === match.home_team || team === match.away_team
           ? `${findFullName(teams, match.home_team)} ${match.home_result} - ${
               match.away_result
             } ${findFullName(teams, match.away_team)}\n`
           : undefined}
       </div>
-      <div className="basic-match-info penalties">
+      <div className="match__info match__penalties">
         {(team === match.home_team || team === match.away_team) &&
         match.home_result === match.away_result &&
         stage !== "group"
           ? `${match.home_penalty} : ${match.away_penalty} on penalties`
           : undefined}
       </div>
-      <div className="stadium-info">
+      <div className="match__stadium">
         {team === match.home_team || team === match.away_team
           ? `${match.date.slice(0, 10)} ${stadium_name}, ${stadium_city}`
           : undefined}

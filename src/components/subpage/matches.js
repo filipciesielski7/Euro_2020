@@ -6,14 +6,12 @@ const Matches = ({ code }) => {
   const { matches, groups, round16, round8, round4, round2 } =
     useGlobalContext();
 
-  // let all_info, matches2;
   let all_info;
   groups.forEach((element) => {
     element.teams.forEach((team) => {
       if (team.code === code) {
         matches.forEach((matches_element) => {
           if (matches_element[0] === element.name) {
-            // matches2 = matches_element[1];
             all_info = {
               matches: matches_element[1],
               name: team.name,
@@ -26,7 +24,6 @@ const Matches = ({ code }) => {
     });
   });
 
-   
   let isPlayingInRound16 = false;
   round16.forEach((match) => {
     if (match.home_team === code || match.away_team === code) {
@@ -53,8 +50,8 @@ const Matches = ({ code }) => {
   });
 
   return (
-    <div className="matches-container">
-      <div className="match-title">Group Stage</div>
+    <div className="matches">
+      <div className="matches__title">Group Stage</div>
       {all_info
         ? all_info.matches.map((match) => {
             return (
@@ -68,7 +65,11 @@ const Matches = ({ code }) => {
             );
           })
         : undefined}
-      <div className={isPlayingInRound16 ? "match-title" : "none"}>
+      <div
+        className={
+          isPlayingInRound16 ? "matches__title" : "matches__title--none"
+        }
+      >
         Round 16
       </div>
       {round16
@@ -84,7 +85,11 @@ const Matches = ({ code }) => {
             );
           })
         : undefined}
-      <div className={isPlayingInRound8 ? "match-title" : "none"}>
+      <div
+        className={
+          isPlayingInRound8 ? "matches__title" : "matches__title--none"
+        }
+      >
         Quarterfinal
       </div>
       {round8
@@ -100,7 +105,11 @@ const Matches = ({ code }) => {
             );
           })
         : undefined}
-      <div className={isPlayingInRound4 ? "match-title" : "none"}>
+      <div
+        className={
+          isPlayingInRound4 ? "matches__title" : "matches__title--none"
+        }
+      >
         Semifinal
       </div>
       {round4
@@ -116,7 +125,13 @@ const Matches = ({ code }) => {
             );
           })
         : undefined}
-      <div className={isPlayingInRound2 ? "match-title" : "none"}>Final</div>
+      <div
+        className={
+          isPlayingInRound2 ? "matches__title" : "matches__title--none"
+        }
+      >
+        Final
+      </div>
       {round2
         ? round2.map((match) => {
             return (

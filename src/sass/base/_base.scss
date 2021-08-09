@@ -29,19 +29,3 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-// html{
-//     @include respond(phone) {
-//         font-size: 70%;
-//     }
-
-//     @include respond(tab-port) {
-//         font-size: 80%;
-//     }
-//     @include respond(tab-land) {
-//         font-size: 90%;
-//     }
-//     @include respond(big-desktop) {
-//         font-size: 100%;
-//     }
-// }

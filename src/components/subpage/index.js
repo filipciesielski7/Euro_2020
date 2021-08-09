@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import Navbar from "./navbar";
 import Standings from "./standings";
 import Matches from "./matches";
+// import Squads from "./squads";
 
 const Team = () => {
   const { code } = useParams();
@@ -14,52 +15,60 @@ const Team = () => {
   };
 
   return (
-    <div className="single-team-container">
-      <div className="single-team-section">
-        <Link to="/" className="single-team-btn">
-          <div className="back-icon">
+    <div className="team">
+      <div className="team__section">
+        <Link to="/" className="team__btn">
+          <div className="team__back-icon">
             <FaBackward />
           </div>
-          <span className="back-info">Back Home</span>
+          <span className="team__back-info">Back Home</span>
         </Link>
         <Navbar code={code} />
-        <div className="sub-main">
-          <div className="sub-main-nav">
+        <div className="team__main">
+          <div className="team__main-navbar">
             <div
-              className={`sub-main-nav-element ${
-                active === 1 ? "sub-main-nav-element-clicked" : ""
+              className={`team__main-navbar-element ${
+                active === 1 ? "team__main-navbar-element--clicked" : ""
               }`}
               onClick={() => handleActiveBarChange(1)}
             >
               <p>Standings</p>
             </div>
             <div
-              className={`sub-main-nav-element ${
-                active === 2 ? "sub-main-nav-element-clicked" : ""
+              className={`team__main-navbar-element ${
+                active === 2 ? "team__main-navbar-element--clicked" : ""
               }`}
               onClick={() => handleActiveBarChange(2)}
             >
               <p>Matches</p>
             </div>
-            <div
-              className={`sub-main-nav-element ${
-                active === 3 ? "sub-main-nav-element-clicked" : ""
+            {/* <div
+              className={`team__main-navbar-element ${
+                active === 3 ? "team__main-navbar-element--clicked" : ""
               }`}
               onClick={() => handleActiveBarChange(3)}
             >
               <p>Squad</p>
-            </div>
+            </div> */}
           </div>
 
-          <div className={`sub-main-major ${active === 1 ? "" : "major-none"}`}>
+          <div
+            className={`team__main-section ${
+              active === 1 ? "" : "team__main-section--none"
+            }`}
+          >
             <Standings code={code} />
           </div>
-          <div className={`sub-main-major ${active === 2 ? "" : "major-none"}`}>
+          <div
+            className={`team__main-section ${
+              active === 2 ? "" : "team__main-section--none"
+            }`}
+          >
             <Matches code={code} />
           </div>
-          <div className={`sub-main-major ${active === 3 ? "" : "major-none"}`}>
-            SQUAD
-          </div>
+          {/* <div className={`team__main-section ${active === 3 ? "" : "team__main-section--none"}`}>
+            <Squads code={code} />
+          </div> */}
         </div>
       </div>
     </div>

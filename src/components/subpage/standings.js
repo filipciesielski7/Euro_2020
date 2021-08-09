@@ -60,33 +60,39 @@ const Standings = ({ code }) => {
     }
   });
 
-  let third_place = "outh";
+  let third_place = "standings__out";
   if (isPlayingInRound16) {
     third_place = "";
   }
 
   return (
     <>
-      <div className="final-table">Final Table</div>
+      <div className="team__title">Final Table</div>
       <div className="standings">
-        <div className="standings-container">
-          <h3 className={winner === page_team ? "underline" : ""}>
+        <div className="standings__container">
+          <h3 className={winner === page_team ? "standings__active" : ""}>
             1. {winner}{" "}
           </h3>
-          <h3 className={runnerup === page_team ? "underline" : ""}>
+          <h3 className={runnerup === page_team ? "standings__active" : ""}>
             2. {runnerup}{" "}
           </h3>
           <h3
             className={
               thirdplace === page_team
-                ? `${third_place} underline`
+                ? `${third_place} standings__active`
                 : `${third_place}`
             }
           >
-            <span className="out">3.</span> {thirdplace}
+            3. {thirdplace}
           </h3>
-          <h3 className={fourthplace === page_team ? "outh underline" : "outh"}>
-            <span className="out">4.</span> {fourthplace}
+          <h3
+            className={
+              fourthplace === page_team
+                ? "standings__out standings__active"
+                : "standings__out"
+            }
+          >
+            4. {fourthplace}
           </h3>
         </div>
       </div>

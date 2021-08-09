@@ -25,26 +25,24 @@ const SearchForm = () => {
 
   return (
     <>
-      <form className="search-form">
-        <div className="form-control">
-          {/* <form className="input-form"> */}
-          <label htmlFor="name">search your team</label>
+      <form className="navbar__search">
+        <div className="navbar__form">
+          <label htmlFor="name" className="navbar__label">Search your team</label>
           <Hint options={hintArray} allowTabFill>
             <input
               type="text"
               id="name"
               ref={searchValue}
               onChange={searchTeam}
-              className="search-input"
-              placeholder="team name"
+              className="navbar__input"
+              placeholder="Team name"
               autoComplete="off"
               value={searchTerm}
             />
           </Hint>
-          <div className="del-text" onClick={() => handleDelete()}>
+          <div className="navbar__delete" onClick={() => handleDelete()}>
             <FiDelete />
           </div>
-          {/* </form> */}
         </div>
       </form>
     </>

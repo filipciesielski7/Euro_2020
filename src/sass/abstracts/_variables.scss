@@ -1,5 +1,5 @@
 // COLORS
-$color-primary: #0084A4;
+$color-primary: #0084a4;
 $color-secondary-primary: #21a0b3;
 $color-third-primary: #145f6b;
 $text-primary-color: #fff;
@@ -7,7 +7,7 @@ $text-primary-color: #fff;
 $color-primary-light: #707070;
 $color-primary-dark: #343434;
 
-$color-secondary-light: #C4C4C4;
+$color-secondary-light: #c4c4c4;
 $color-secondary-dark: #686c6f;
 
 $color-tertiary-light: #2998ff;
@@ -22,14 +22,22 @@ $color-grey-dark-2: #999;
 $color-white: #fff;
 $color-black: #000;
 
+$color-layout-background: rgba(255, 255, 255, 0.5);
+
 // FONT
-$font: 'UEFA-EURO-2020';
+$font: "UEFA-EURO-2020";
 $default-font-size: 1.6rem;
 $smaller-font-size: 1rem;
 
 // CONTAINER WIDTH
 $default-max-width: 1000px;
 
+// NAVBAR HEIGHT
+$navbar-height: 293px;
+
 // CART DEFAULT SIZE
 $default-cart-width: 177px;
 $default-cart-height: 118px;
+
+// BORDER RADIUS DEFAULT SIZE
+$default-border-radius: 8px;

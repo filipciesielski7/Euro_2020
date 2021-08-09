@@ -24,14 +24,14 @@ const Navbar = ({ code }) => {
   }
 
   return (
-    <div className="subnav">
-      <div className="single-team-title">
-        <h2 className="single-team-name">{name}</h2>
-        <h2 className="single-team-code">{code}</h2>
-        <h2 className="single-team-group">{group}</h2>
+    <div className="team__navbar">
+      <div className="team__navbar-info">
+        <h2 className="team__navbar-name">{name}</h2>
+        <h2 className="team__navbar-code">{code}</h2>
+        <h2 className="team__navbar-group">{group}</h2>
       </div>
       <div
-        className="single-team-team"
+        className="team__navbar-flag"
         style={{
           backgroundImage: `url(${flagUrl})`,
         }}

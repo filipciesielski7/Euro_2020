@@ -5,81 +5,81 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.error-section {
-  width: $default-max-width;
-  height: 50%;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.5);
-  color: $color-primary;
+  &__container {
+    width: $default-max-width;
+    height: 50%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    color: $color-primary;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-  @include respond(tab-land) {
-    margin: 10px;
-  }
-}
-
-.error-logo {
-  height: 50%;
-
-  @include respond(tab-port) {
-    height: 40%;
-  }
-  @include respond(small-phone) {
-    height: 38%;
-  }
-  @include respond(very-slim-phone) {
-    height: 35%;
-  }
-}
-
-.error-info {
-  font-size: 40px;
-  margin-top: 25px;
-
-  @include respond(tab-port) {
-    font-size: 30px;
-  }
-  @include respond(small-phone) {
-    font-size: 23px;
-  }
-  @include respond(very-slim-phone) {
-    font-size: 18px;
-  }
-}
-
-.error-btn {
-  padding: 10px;
-  margin-top: 25px;
-  border-radius: 10px;
-  border: 3px solid $color-primary;
-  background: transparent;
-  color: $color-primary;
-  font-size: 20px;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &:hover {
-    transform: scale(1.1);
-    background: $color-primary;
-    color: $text-primary-color;
-    border: 3px solid $color-white;
+    @include respond(tab-land) {
+      margin: 10px;
+    }
   }
 
-  @include respond(tab-port) {
-    font-size: 17px;
+  &__logo {
+    height: 50%;
+
+    @include respond(tab-port) {
+      height: 40%;
+    }
+    @include respond(small-phone) {
+      height: 38%;
+    }
+    @include respond(very-slim-phone) {
+      height: 35%;
+    }
   }
-  @include respond(small-phone) {
-    font-size: 14px;
+
+  &__info {
+    font-size: 40px;
+    margin-top: 25px;
+
+    @include respond(tab-port) {
+      font-size: 30px;
+    }
+    @include respond(small-phone) {
+      font-size: 23px;
+    }
+    @include respond(very-slim-phone) {
+      font-size: 18px;
+    }
   }
-  @include respond(very-slim-phone) {
-    font-size: 12px;
+
+  &__btn {
+    padding: 10px;
+    margin-top: 25px;
+    border-radius: 10px;
+    border: 3px solid $color-primary;
+    background: transparent;
+    color: $color-primary;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      transform: scale(1.1);
+      background: $color-primary;
+      color: $text-primary-color;
+      border: 3px solid $color-white;
+    }
+
+    @include respond(tab-port) {
+      font-size: 17px;
+    }
+    @include respond(small-phone) {
+      font-size: 14px;
+    }
+    @include respond(very-slim-phone) {
+      font-size: 12px;
+    }
   }
 }

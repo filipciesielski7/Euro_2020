@@ -5,10 +5,10 @@ import Logo from "../data/UEFA-EURO-2020.png";
 const Error = () => {
   return (
     <div className="error">
-      <div className="error-section">
-        <img src={Logo} alt="Euro 2020 logo" className="error-logo" />
-        <h2 className="error-info">Oops! Something went wrong</h2>
-        <Link to="/" className="error-btn">
+      <div className="error__container">
+        <img src={Logo} alt="UEFA-Euro-2020 logo" className="error__logo" />
+        <h2 className="error__info">Oops! Something went wrong</h2>
+        <Link to="/" className="error__btn">
           Back Home
         </Link>
       </div>

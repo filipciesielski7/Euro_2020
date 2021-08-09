@@ -9,8 +9,8 @@ const Main = () => {
   if (loading) {
     return (
       <main>
-        <div className="main-container main_container-loading">
-          <Default color="#0084A4" size="64" sizeUnit="px" className="loader" />
+        <div className="main main--loading">
+          <Default color="#0084A4" size="64" sizeUnit="px" className="main__loader" />
         </div>
       </main>
     );
@@ -19,7 +19,7 @@ const Main = () => {
   if (teams.length < 1) {
     return (
       <main>
-        <div className="main-container main_container-no-results">
+        <div className="main main--no-results">
           <h2>No teams matched your search criteria</h2>
         </div>
       </main>
@@ -27,7 +27,7 @@ const Main = () => {
   }
 
   return (
-    <div className="main-container">
+    <div className="main">
       <Group />
     </div>
   );

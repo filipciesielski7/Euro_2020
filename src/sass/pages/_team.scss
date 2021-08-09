@@ -1,0 +1,408 @@
+.team {
+  background: $color-secondary-primary;
+  width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__section {
+    width: $default-max-width;
+    margin: 10px;
+    padding: 5px;
+    border-radius: $default-border-radius;
+    background: $color-layout-background;
+    color: $color-primary;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tab-land) {
+      margin: 10px;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: 10px;
+    margin-top: 25px;
+    margin-left: 25px;
+    border-radius: 10px;
+    border: 3px solid $color-primary;
+    background: transparent;
+    color: $color-primary;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      transform: scale(1.1);
+      background: $color-primary;
+      color: $text-primary-color;
+      border: 3px solid $color-white;
+
+      @include respond(phone) {
+        border: 1px solid $color-white;
+        transform: scale(1.05);
+      }
+    }
+
+    @include respond(tab-port) {
+      font-size: 17px;
+    }
+    @include respond(phone) {
+      padding: 5px;
+      margin-top: 15px;
+      margin-left: 15px;
+      border: none;
+    }
+    @include respond(small-phone) {
+      font-size: 14px;
+      padding: 5px;
+      margin-top: 15px;
+      margin-left: 15px;
+      border: none;
+    }
+    @include respond(very-slim-phone) {
+      font-size: 12px;
+    }
+  }
+
+  &__back-icon {
+    @media screen and (min-width: 40em) {
+      display: none;
+    }
+  }
+
+  &__back-info {
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__navbar {
+    width: 100%;
+    padding: 20px;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    @include respond(phone) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__navbar-info {
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
+
+  &__navbar-flag {
+    border: 5px solid $color-white;
+    border-radius: 18px;
+    color: $color-black;
+    width: 1.6 * $default-cart-width;
+    height: 1.6 * $default-cart-height;
+    background-size: 100% 100%;
+    text-align: center;
+    position: relative;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include respond(tab-port) {
+      width: 1.4 * $default-cart-width;
+      height: 1.4 * $default-cart-height;
+    }
+    @include respond(phone) {
+      width: 1.4 * $default-cart-width;
+      height: 1.4 * $default-cart-height;
+    }
+    @include respond(small-phone) {
+      width: 1.3 * $default-cart-width;
+      height: 1.3 * $default-cart-height;
+    }
+    @include respond(slim-phone) {
+      width: 1.1 * $default-cart-width;
+      height: 1.1 * $default-cart-height;
+    }
+    @include respond(very-slim-phone) {
+      width: 1 * $default-cart-width;
+      height: 1 * $default-cart-height;
+    }
+  }
+
+  &__navbar-name {
+    font-size: 60px;
+
+    @include respond(tab-port) {
+      font-size: 40px;
+    }
+    @include respond(small-phone) {
+      font-size: 35px;
+    }
+    @include respond(slim-phone) {
+      font-size: 30px;
+    }
+    @include respond(very-slim-phone) {
+      font-size: 25px;
+    }
+  }
+
+  &__main {
+    width: 80%;
+    max-width: $default-max-width - 10px;
+    height: 100%;
+    border-radius: $default-border-radius;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    @include respond(phone) {
+      width: 100%;
+      margin-bottom: 0px;
+    }
+  }
+
+  &__main-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    @include respond(phone) {
+      justify-content: center;
+    }
+
+    align-items: center;
+    font-size: 25px;
+
+    :not(:last-child) {
+      margin-right: 30px;
+    }
+
+    @include respond(small-phone) {
+      font-size: 21px;
+      :not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+
+    @include respond(slim-phone) {
+      font-size: 18px;
+      :not(:last-child) {
+        margin-right: 13px;
+      }
+    }
+
+    @include respond(very-slim-phone) {
+      font-size: 13px;
+      :not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__main-navbar-element {
+    border: 3px solid $color-primary;
+    border-radius: 8px;
+    padding: 2px 5px;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-white;
+      border: 3px solid $color-white;
+      background: $color-primary;
+      transform: scale(1.1);
+    }
+
+    &--clicked {
+      border: 3px solid $color-white;
+      background: $color-primary;
+      color: $color-white;
+      transform: scale(1.1);
+    }
+  }
+
+  &__main-section {
+    margin-top: 20px;
+
+    &--none {
+      display: none;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 40px;
+
+    @include respond(phone) {
+      font-size: 35px;
+    }
+    @include respond(small-phone) {
+      font-size: 30px;
+    }
+    @include respond(slim-phone) {
+      font-size: 25px;
+    }
+    @include respond(very-slim-phone) {
+      font-size: 20px;
+    }
+  }
+}
+
+.standings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  width: 80%;
+  margin: 12px auto 0px auto;
+  padding: 5px;
+
+  @include respond(phone) {
+    font-size: 35px;
+  }
+  @include respond(small-phone) {
+    font-size: 30px;
+  }
+  @include respond(slim-phone) {
+    font-size: 25px;
+  }
+  @include respond(very-slim-phone) {
+    font-size: 20px;
+  }
+  @include respond(tab-port) {
+    width: 100%;
+  }
+
+  border: 3px solid $color-white;
+  border-radius: $default-border-radius;
+  background: $color-primary;
+  color: $color-white;
+
+  &__active {
+    font-size: 60px;
+    text-shadow: 0 0 3px $color-primary, 0 0 5px $color-black;
+
+    @include respond(phone) {
+      font-size: 55px;
+    }
+    @include respond(small-phone) {
+      font-size: 50px;
+    }
+    @include respond(slim-phone) {
+      font-size: 45px;
+    }
+    @include respond(very-slim-phone) {
+      font-size: 40px;
+    }
+  }
+
+  &__out {
+    opacity: 0.7;
+  }
+}
+
+.matches {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+
+  @include respond(phone) {
+    font-size: 35px;
+  }
+  @include respond(small-phone) {
+    font-size: 30px;
+  }
+  @include respond(slim-phone) {
+    font-size: 25px;
+  }
+  @include respond(very-slim-phone) {
+    font-size: 20px;
+  }
+
+  &__title--none {
+    display: none;
+  }
+}
+
+.match {
+  background-color: $color-primary;
+  color: $color-white;
+  border: 3px solid $color-white;
+  border-radius: $default-border-radius;
+
+  padding: 5px;
+  margin: 5px;
+  margin-top: 8px;
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 30px;
+
+  @include respond(tab-port) {
+    width: 100%;
+  }
+  @include respond(phone) {
+    font-size: 25px;
+  }
+  @include respond(small-phone) {
+    font-size: 20px;
+  }
+  @include respond(slim-phone) {
+    font-size: 15px;
+  }
+  @include respond(very-slim-phone) {
+    font-size: 12px;
+  }
+
+  &__penalties {
+    font-size: 25px;
+
+    @include respond(phone) {
+      font-size: 20px;
+    }
+    @include respond(small-phone) {
+      font-size: 20px;
+    }
+    @include respond(slim-phone) {
+      font-size: 15px;
+    }
+    @include respond(very-slim-phone) {
+      font-size: 12px;
+    }
+  }
+
+  &__stadium {
+    font-size: 18px;
+
+    @include respond(small-phone) {
+      font-size: 15px;
+    }
+    @include respond(slim-phone) {
+      font-size: 12px;
+    }
+    @include respond(very-slim-phone) {
+      font-size: 9px;
+    }
+  }
+}

@@ -4,7 +4,6 @@ import { useGlobalContext } from "../../context";
 
 const Team = ({ team }) => {
   const { flags } = useGlobalContext();
-  // const { group_name, name, code } = team;
   const { name, code } = team;
 
   let symbol;
@@ -16,21 +15,18 @@ const Team = ({ team }) => {
   const flagUrl = `https://flagcdn.com/h240/${symbol.replace(/_/g, "-")}.png`;
 
   return (
-    <Link
-      to={`/team/${code}`}
-      className="team-link"
-    >
-      <div>
-        <div
-          className="team"
-          style={{
-            backgroundImage: `url(${flagUrl})`,
-          }}
-        ></div>
-        <div className="name">
-          <span className="name-span">{name}</span>
-        </div>
+    <Link to={`/team/${code}`} className="main__team-link">
+      {/* <div> */}
+      <div
+        className="main__team-flag"
+        style={{
+          backgroundImage: `url(${flagUrl})`,
+        }}
+      ></div>
+      <div className="main__team-name-container">
+        <span className="main__team-name">{name}</span>
       </div>
+      {/* </div> */}
     </Link>
   );
 };

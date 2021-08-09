@@ -1,114 +1,107 @@
 .navbar {
   max-width: $default-max-width;
-  height: 293px;
-  border-radius: 8px;
+  height: $navbar-height;
+  border-radius: $default-border-radius;
   margin: 10px auto;
-  background: rgba(255, 255, 255, 0.5);
+  background: $color-layout-background;
   color: $color-third-primary;
 
   display: flex;
-  // flex-direction: column;
   align-items: center;
   justify-content: space-around;
 
   @include respond(tab-land) {
     margin: 10px;
   }
-}
 
-.search-form {
-  width: 50%;
-}
-
-.navbar-logo {
-  // height: 50%;
-  height: 75%;
-
-  @include respond(tab-port) {
-    // height: 40%;
-    height: 60%;
-  }
-  @include respond(small-phone) {
-    // height: 38%;
-    height: 50%;
-  }
-  @include respond(very-slim-phone) {
-    // height: 35%;
-    height: 40%;
-  }
-}
-
-.form-control {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 35px;
-  color: #0084a4;
-  position: relative;
-
-  @include respond(tab-port) {
-    font-size: 30px;
-  }
-  @include respond(small-phone) {
-    font-size: 20px;
-  }
-  @include respond(very-slim-phone) {
-    font-size: 15px;
-  }
-}
-
-label {
-  margin-bottom: 10px;
-}
-
-.search-input {
-  height: 52px;
-  border-radius: 8px;
-  font-size: 22px;
-  padding-left: 10%;
-  background: transparent;
-  border: 3px solid #0084a4;
-  color: #0084a4;
-  outline: none;
-  position: relative;
-
-  &:focus {
-    border: 3px solid white;
-  }
-  @include respond(tab-port) {
-    font-size: 15px;
-  }
-  @include respond(small-phone) {
-    height: 40px;
-    font-size: 12px;
-  }
-  @include respond(very-slim-phone) {
-    height: 30px;
-    font-size: 9px;
-  }
-}
-
-.del-text{
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transform: translate(300%, 75%);
-
-  @include respond(tab-port) {
-    transform: translate(250%, 75%);
-    font-size: 30px;
+  &__logo {
+    height: 75%;
+    @include respond(tab-port) {
+      height: 60%;
+    }
+    @include respond(small-phone) {
+      height: 50%;
+    }
+    @include respond(very-slim-phone) {
+      height: 40%;
+    }
   }
 
-  @include respond(small-phone) {
-    transform: translate(250%, 75%);
-    font-size: 23px;
+  &__search {
+    width: 50%;
   }
 
-  @include respond(very-slim-phone) {
-    transform: translate(250%, 75%);
-    font-size: 19px;
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 35px;
+    color: $color-primary;
+    position: relative;
+
+    @include respond(tab-port) {
+      font-size: 30px;
+    }
+    @include respond(small-phone) {
+      font-size: 20px;
+    }
+    @include respond(very-slim-phone) {
+      font-size: 15px;
+    }
+  }
+
+  &__input {
+    height: 52px;
+    border-radius: $default-border-radius;
+    font-size: 22px;
+    padding-left: 10%;
+    background: transparent;
+    border: 3px solid $color-primary;
+    color: $color-primary;
+    outline: none;
+    position: relative;
+
+    &:focus {
+      border: 3px solid $color-white;
+    }
+    @include respond(tab-port) {
+      font-size: 15px;
+    }
+    @include respond(small-phone) {
+      height: 40px;
+      font-size: 12px;
+    }
+    @include respond(very-slim-phone) {
+      height: 30px;
+      font-size: 9px;
+    }
+  }
+
+  &__label {
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  &__delete {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: translate(300%, 75%);
+
+    @include respond(tab-port) {
+      transform: translate(250%, 75%);
+      font-size: 30px;
+    }
+    @include respond(small-phone) {
+      transform: translate(250%, 75%);
+      font-size: 23px;
+    }
+    @include respond(very-slim-phone) {
+      transform: translate(250%, 75%);
+      font-size: 19px;
+    }
   }
 }
