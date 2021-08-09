@@ -8,6 +8,9 @@ const Home = () => {
       <div className="home">
         <Navbar />
         <Main />
+        <p className="home__credits">
+          &copy; {new Date().getFullYear()} Filip Ciesielski
+        </p>
       </div>
     </main>
   );

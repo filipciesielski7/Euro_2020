@@ -558,6 +558,19 @@ body {
   overflow: auto;
   height: 100vh;
   width: 100vw; }
+  .home__credits {
+    opacity: .5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; }
+    @media (max-width: 40em) {
+      .home__credits {
+        font-size: 13px; } }
+    @media (max-width: 30em) {
+      .home__credits {
+        font-size: 11px; } }
 
 .error {
   background: #21a0b3;
